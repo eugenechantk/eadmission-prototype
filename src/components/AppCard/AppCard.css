@@ -1,0 +1,6 @@
+.AppCard {
+    background: linear-gradient(90deg, #FC913A 0%, #FE6C5C 72.56%);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
