@@ -1,6 +1,16 @@
 .AppCard {
-    background: linear-gradient(90deg, #FC913A 0%, #FE6C5C 72.56%);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
 }
 
+#bachelor {
+    background: linear-gradient(90deg, #FC913A 0%, #FE6C5C 72.56%);
+}
+
+#taught-post-grad {
+    background: linear-gradient(90deg, #21DA92 0%, #18CEA4 100%);
+}
+
+#research-post-grad {
+    background: linear-gradient(90deg, #6F66CF 0.26%, #362BAA 74.8%);
+}
