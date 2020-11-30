@@ -1,3 +1,8 @@
+.PersonalCardParent {
+    display: grid;
+    column-gap: 16px;
+}
+
 .PersonalCard {
     background: linear-gradient(90deg, #D844CB 0%, #F84986 100%);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
@@ -26,4 +31,22 @@
 
 Button {
     margin-left: auto;
+}
+
+@media only screen and (max-width:516px) {
+    .PersonalCardParent{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .PersonalCardParent{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .PersonalCardParent{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

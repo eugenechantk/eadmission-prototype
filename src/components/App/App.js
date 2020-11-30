@@ -24,7 +24,7 @@ class App extends React.Component {
   render (){
     return (
       <div className="App">
-        <PersonalCard />
+        <PersonalCard profileID='12345'/>
         <AppList category="application in progress" applications={applications.filter(app => app.progress < 1)} />
         <AppList category="submitted applications" applications={applications.filter(app => app.progress >= 1)} />
       </div>

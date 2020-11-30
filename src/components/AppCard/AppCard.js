@@ -9,7 +9,7 @@ export class AppCard extends React.Component {
     };
 
     handleClick () {
-        console.log('button clicked')
+        console.log('link to this button: ' + this.props.program.app_id)
     };
     
     render(){
