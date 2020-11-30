@@ -2,6 +2,7 @@ import logo from '../../logo.svg';
 import './App.css';
 import React from 'react'
 import { AppList } from '../AppList/AppList'
+import { PersonalCard } from '../PersonalCard/PersonalCard'
 
 class Program {
   constructor(level,name,deadline,progress,app_id){
@@ -23,6 +24,7 @@ class App extends React.Component {
   render (){
     return (
       <div className="App">
+        <PersonalCard />
         <AppList category="application in progress" applications={applications.filter(app => app.progress < 1)} />
         <AppList category="submitted applications" applications={applications.filter(app => app.progress >= 1)} />
       </div>
