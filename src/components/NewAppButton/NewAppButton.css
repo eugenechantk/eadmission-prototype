@@ -1,0 +1,25 @@
+.NewAppBtn {
+    background: #E6E6E6;
+    border-radius: 10px;
+    padding: 16px 0;
+    text-align: left;
+    cursor: pointer;
+}
+
+.NewAppBtn:hover{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.NewAppBtn img {
+    margin-left: 16px;
+    margin-right: 6.17px;
+    width: 13.83px;
+    height: 13.83px;
+}
+
+.NewAppBtn h3 {
+    color: #9B9B9B;
+    font-size: 1.125rem;
+    font-weight: bold;
+    display: inline;
+}
