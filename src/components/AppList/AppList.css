@@ -15,8 +15,16 @@
     column-gap: 16px;
 }
 
+.newappbutton {
+    display: grid;
+    column-gap: 16px;
+}
+
 @media only screen and (max-width:516px) {
     .card{
+        grid-template-columns: 1fr;
+    }
+    .newappbutton{
         grid-template-columns: 1fr;
     }
 }
@@ -25,12 +33,18 @@
     .card{
         grid-template-columns: 1fr 1fr;
     }
-
+    .newappbutton{
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media only screen and (min-width:1024px) {
     .card{
         grid-template-columns: 1fr 1fr 1fr;
     }
-
+    .newappbutton{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
+
+
