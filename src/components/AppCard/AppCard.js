@@ -3,16 +3,26 @@ import './AppCard.css'
 import { Button } from '../Button/Button'
 
 export class AppCard extends React.Component {
+    constructor(props) {
+        super(props)
+        this.handleClick = this.handleClick.bind(this)
+    };
+
+    handleClick () {
+        console.log('button clicked')
+    };
+    
     render(){
         return (
             <div className='AppCard' id={this.props.program.level}>
-                <h4>
-                    {this.props.program.level === 'bachelor' ? 'Bachelor Degree' : 
-                        this.props.program.level === 'taught-post-grad' ? 'Taught Postgraduate' :
-                            this.props.program.level === 'research-post-grad' && 'Research Postgraduate'}
-                </h4>
-                <h2>{this.props.program.name}</h2>
-                <hr />
+                <div className="details">
+                    <h4>
+                        {this.props.program.level === 'bachelor' ? 'Bachelor Degree' : 
+                            this.props.program.level === 'taught-post-grad' ? 'Taught Postgraduate' :
+                                this.props.program.level === 'research-post-grad' && 'Research Postgraduate'}
+                    </h4>
+                    <h2>{this.props.program.name}</h2>
+                </div>
                 <div className='AppCardDetails'>
                     <div className='Deadline'>
                         <h3>{this.props.program.deadline.getDate()}/{this.props.program.deadline.getMonth() + 1}</h3>
@@ -28,10 +38,10 @@ export class AppCard extends React.Component {
                                 this.props.program.progress === 3 ? 'completed' :
                                     'done'}
                         </p>
-                        <Button />
                     </div>
+                    <Button className="button" onClick={this.handleClick}/>
                 </div>
             </div>
         )
-    }
+    };
 }

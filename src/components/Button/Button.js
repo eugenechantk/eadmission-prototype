@@ -5,7 +5,7 @@ import './Button.css'
 export class Button extends React.Component {
     render() {
         return (
-            <button type="button" onClick='props handleClick'>
+            <button type="button" onClick={this.props.onClick}>
                 <img src={next} alt='click to application'></img>
             </button>
         )
