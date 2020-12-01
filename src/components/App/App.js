@@ -4,6 +4,7 @@ import React from 'react'
 import { AppList } from '../AppList/AppList'
 import { PersonalCard } from '../PersonalCard/PersonalCard'
 import { Greeting } from '../Greeting/Greeting'
+import { NavBar } from '../NavBar/NavBar'
 
 class Program {
   constructor(level,name,deadline,progress,app_id){
@@ -25,6 +26,7 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.dueAppsThisWeek = this.dueAppsThisWeek.bind(this)
+    this.logoutHandleClick = this.logoutHandleClick.bind(this)
   }
   
   dueAppsThisWeek (apps) {
@@ -33,10 +35,15 @@ class App extends React.Component {
     let weekEnd = new Date(weekStart.getTime() + 6*86400000)
     return apps.filter(app => (app.deadline.getTime() <= weekEnd && app.deadline.getTime() > weekStart && app.progress < 1)).length
   }
+
+  logoutHandleClick () {
+    console.log('Logging out')
+  }
   
   render (){
     return (
       <div className="App">
+        <NavBar onClick={this.logoutHandleClick}/>
         <Greeting numOfApp={this.dueAppsThisWeek(applications)}/>
         <PersonalCard profileID='12345'/>
         <AppList category="application in progress" applications={applications.filter(app => app.progress < 1)} />

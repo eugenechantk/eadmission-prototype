@@ -1,0 +1,18 @@
+.NavBar {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    width: 161px;
+    height: 31px;
+}
+
+.logoutIcon {
+    width: 22px;
+    height: 19px;
+    cursor: pointer;
+}
