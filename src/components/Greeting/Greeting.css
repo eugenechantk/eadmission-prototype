@@ -1,0 +1,22 @@
+.GreetingContainer {
+    max-width: 300px;
+    margin-bottom: 24px;
+}
+
+.GreetingContainer h1{
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-block-end: 0.25rem;
+    margin-block-start: 0;
+}
+
+.GreetingContainer p {
+    font-size: 1rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.GreetingContainer span {
+    font-weight: bold;
+    color: #A0232C;
+}
